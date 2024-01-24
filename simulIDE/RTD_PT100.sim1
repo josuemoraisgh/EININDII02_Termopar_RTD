@@ -1,27 +1,33 @@
-<circuit version="1.0.0-SR0" rev="1320" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+<circuit version="1.0.0-SR2" rev="1449" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
 
 <item itemtype="Fixed Voltage" CircId="Fixed Voltage-69" mainComp="false" Show_id="false" Show_Val="true" Pos="-60,-452" rotation="90" hflip="1" vflip="1" label="Fixed Voltage-69" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Out="true" Voltage="5 V" />
 
 <item itemtype="Subcircuit" CircId="Uno-63" mainComp="false" Show_id="true" Show_Val="false" Pos="-280,-384" rotation="0" hflip="1" vflip="1" label="Arduino Uno-63" idLabPos="100,-21" labelrot="0" valLabPos="0,0" valLabRot="0" Logic_Symbol="false">
-<mainCompProps itemtype="MCU" CircId="63_mega328-109" mainComp="true" Show_id="false" Show_Val="false" Pos="20,20" rotation="0" hflip="1" vflip="1" label="63_mega328-109" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Auto_Load="false" Rst_enabled="true" Ext_Osc="true" Wdt_enabled="false" />
+<mainCompProps itemtype="MCU" CircId="63_mega328-109" mainComp="true" Show_id="false" Show_Val="false" Pos="20,20" rotation="0" hflip="1" vflip="1" label="63_mega328-109" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../.pio/build/uno/firmware.hex" Auto_Load="false" Rst_enabled="true" Ext_Osc="true" Wdt_enabled="false" />
 </item>
 
 <item itemtype="Resistor" CircId="Resistor-15" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-60,-404" rotation="90" hflip="1" vflip="1" label="Resistor-14" idLabPos="-12,-20" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
 
 <item itemtype="Ground" CircId="Ground-6" mainComp="false" Show_id="false" Show_Val="false" Pos="-60,-280" rotation="0" hflip="1" vflip="1" label="Ground-6" idLabPos="-16,8" labelrot="0" valLabPos="0,0" valLabRot="0" />
 
-<item itemtype="RTD" CircId="RTD-1" mainComp="false" Show_id="false" Show_Val="false" Pos="-60,-328" rotation="90" hflip="-1" vflip="1" label="RTD-1" idLabPos="-16,-24" labelrot="0" valLabPos="-16,30" valLabRot="0" Temp="12 ºC" Min_Temp="0 ºC" Max_Temp="200 ºC" Dial_Step="1 ºC" R0="100 Ω" />
+<item itemtype="RTD" CircId="RTD-1" mainComp="false" Show_id="false" Show_Val="false" Pos="-60,-328" rotation="90" hflip="-1" vflip="1" label="RTD-1" idLabPos="-16,-24" labelrot="0" valLabPos="-16,30" valLabRot="0" Temp="198 ºC" Min_Temp="0 ºC" Max_Temp="200 ºC" Dial_Step="1 ºC" R0="100 Ω" />
+
+<item itemtype="SerialPort" CircId="SerialPort-75" mainComp="false" Show_id="false" Show_Val="false" Pos="-236,-428" rotation="0" hflip="1" vflip="1" label="SerialPort-75" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Port="COM19" Baudrate="115200 _Bauds" DataBits="8 _Bits" StopBits="1 _Bits" />
 
 <item itemtype="Node" CircId="Node-67" mainComp="false" Pos="-60,-368" />
 
-<item itemtype="Connector" uid="Connector-64" startpinid="Ground-6-Gnd" endpinid="RTD-1-rPin" pointList="-60,-296,-60,-312" />
+<item itemtype="Connector" uid="connector-70" startpinid="Ground-6-Gnd" endpinid="RTD-1-rPin" pointList="-60,-296,-60,-312" />
 
-<item itemtype="Connector" uid="Connector-65" startpinid="RTD-1-lPin" endpinid="Node-67-0" pointList="-60,-344,-60,-368" />
+<item itemtype="Connector" uid="connector-71" startpinid="RTD-1-lPin" endpinid="Node-67-0" pointList="-60,-344,-60,-368" />
 
-<item itemtype="Connector" uid="Connector-66" startpinid="Uno-63-A5" endpinid="Node-67-1" pointList="-128,-368,-60,-368" />
+<item itemtype="Connector" uid="connector-72" startpinid="Uno-63-A5" endpinid="Node-67-1" pointList="-128,-368,-60,-368" />
 
-<item itemtype="Connector" uid="Connector-68" startpinid="Node-67-2" endpinid="Resistor-15-rPin" pointList="-60,-368,-60,-388" />
+<item itemtype="Connector" uid="connector-73" startpinid="Node-67-2" endpinid="Resistor-15-rPin" pointList="-60,-368,-60,-388" />
 
-<item itemtype="Connector" uid="Connector-70" startpinid="Resistor-15-lPin" endpinid="Fixed Voltage-69-outnod" pointList="-60,-420,-60,-436" />
+<item itemtype="Connector" uid="connector-74" startpinid="Resistor-15-lPin" endpinid="Fixed Voltage-69-outnod" pointList="-60,-420,-60,-436" />
+
+<item itemtype="Connector" uid="Connector-76" startpinid="SerialPort-75-pin0" endpinid="Uno-63-0" pointList="-276,-436,-312,-436,-312,-368,-272,-368" />
+
+<item itemtype="Connector" uid="Connector-77" startpinid="SerialPort-75-pin1" endpinid="Uno-63-1" pointList="-276,-420,-276,-396,-256,-396,-256,-360,-272,-360" />
 
 </circuit>

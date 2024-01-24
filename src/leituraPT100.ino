@@ -3,16 +3,16 @@
 
 double getTempRTD(int pin)
 {
-  const double r1 = 1000;
-  const double r2 = 1000;
-  const double r3 = 1000;
-  const double rg = 1000;
+  const double r1 = 1000.0;
+  const double r2 = 1000.0;
+  const double r3 = 1000.0;
+  const double rg = 1000.0;
 
-  const double rc = 200;
-  const double ra = 100;
-  const double rb = 100;
+  const double rc = 200.0;
+  const double ra = 100.0;
+  const double rb = 100.0;
 
-  double k = (rc / (rc + ra)) - (((double)analogRead(pin)) * r2 * rg / (1023 * r3 * (rg + 2 * r1)));
+  double k = (rc / (rc + ra)) - (((double)analogRead(pin)) * r2 * rg / (1023.0 * r3 * (rg + 2.0 * r1)));
 
   double r = ((double)rb) / ((1.0 / k) - 1.0);
 

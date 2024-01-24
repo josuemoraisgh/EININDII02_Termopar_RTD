@@ -1,7 +1,7 @@
-<circuit version="1.0.0-SR0" rev="1320" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+<circuit version="1.0.0-SR2" rev="1449" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
 
 <item itemtype="Subcircuit" CircId="Uno-63" mainComp="false" Show_id="true" Show_Val="false" Pos="-328,-384" rotation="0" hflip="1" vflip="1" label="Arduino Uno-63" idLabPos="72,-22" labelrot="0" valLabPos="0,0" valLabRot="0" Logic_Symbol="false">
-<mainCompProps itemtype="MCU" CircId="63_mega328-109" mainComp="true" Show_id="false" Show_Val="false" Pos="20,20" rotation="0" hflip="1" vflip="1" label="63_mega328-109" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../leituraPT100/leituraPT100.ino.standard.hex" Auto_Load="false" Rst_enabled="true" Ext_Osc="true" Wdt_enabled="false" />
+<mainCompProps itemtype="MCU" CircId="63_mega328-109" mainComp="true" Show_id="false" Show_Val="false" Pos="20,20" rotation="0" hflip="1" vflip="1" label="63_mega328-109" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../.pio/build/uno/firmware.hex" Auto_Load="false" Rst_enabled="true" Ext_Osc="true" Wdt_enabled="false" />
 </item>
 
 <item itemtype="Ground" CircId="Ground-6" mainComp="false" Show_id="false" Show_Val="false" Pos="-96,-276" rotation="0" hflip="1" vflip="1" label="Ground-6" idLabPos="-16,8" labelrot="0" valLabPos="0,0" valLabRot="0" />
@@ -44,6 +44,8 @@
 
 <item itemtype="RTD" CircId="RTD-253" mainComp="false" ShowProp="Temp" Show_id="true" Show_Val="true" Pos="220,-336" rotation="-90" hflip="1" vflip="1" label="PT100" idLabPos="28,7" labelrot="90" valLabPos="-11,10" valLabRot="90" Temp="112.2 ºC" Min_Temp="0 ºC" Max_Temp="200 ºC" Dial_Step="0 ºC" R0="100 Ω" />
 
+<item itemtype="SerialPort" CircId="SerialPort-293" mainComp="false" Show_id="false" Show_Val="false" Pos="-288,-420" rotation="0" hflip="1" vflip="1" label="SerialPort-293" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Port="COM18" Baudrate="115200 _Bauds" DataBits="8 _Bits" StopBits="1 _Bits" />
+
 <item itemtype="Node" CircId="Node-81" mainComp="false" Pos="32,-432" />
 
 <item itemtype="Node" CircId="Node-87" mainComp="false" Pos="32,-304" />
@@ -65,6 +67,8 @@
 <item itemtype="Node" CircId="Node-255" mainComp="false" Pos="220,-368" />
 
 <item itemtype="Node" CircId="Node-258" mainComp="false" Pos="192,-304" />
+
+<item itemtype="Node" CircId="Node-299" mainComp="false" Pos="-328,-428" />
 
 <item itemtype="Connector" uid="connector-259" startpinid="opAmp-71-output" endpinid="Node-81-0" pointList="48,-432,32,-432" />
 
@@ -116,22 +120,30 @@
 
 <item itemtype="Connector" uid="connector-283" startpinid="Node-145-2" endpinid="Resistor-116-rPin" pointList="164,-360,164,-352" />
 
-<item itemtype="Connector" uid="connector-286" startpinid="opAmp-72-inputNinv" endpinid="Node-145-1" pointList="96,-296,144,-296,144,-360,164,-360" />
+<item itemtype="Connector" uid="connector-284" startpinid="opAmp-72-inputNinv" endpinid="Node-145-1" pointList="96,-296,144,-296,144,-360,164,-360" />
 
-<item itemtype="Connector" uid="connector-291" startpinid="Resistor-117-lPin" endpinid="Node-255-0" pointList="220,-380,220,-368" />
+<item itemtype="Connector" uid="connector-285" startpinid="Resistor-117-lPin" endpinid="Node-255-0" pointList="220,-380,220,-368" />
 
-<item itemtype="Connector" uid="connector-292" startpinid="Resistor-116-lPin" endpinid="Node-258-0" pointList="164,-320,164,-304,192,-304" />
+<item itemtype="Connector" uid="connector-286" startpinid="Resistor-116-lPin" endpinid="Node-258-0" pointList="164,-320,164,-304,192,-304" />
 
-<item itemtype="Connector" uid="connector-293" startpinid="RTD-253-rPin" endpinid="Node-255-1" pointList="220,-352,220,-368" />
+<item itemtype="Connector" uid="connector-287" startpinid="RTD-253-rPin" endpinid="Node-255-1" pointList="220,-352,220,-368" />
 
-<item itemtype="Connector" uid="connector-294" startpinid="Node-255-2" endpinid="opAmp-71-inputNinv" pointList="220,-368,144,-368,144,-440,96,-440" />
+<item itemtype="Connector" uid="connector-288" startpinid="Node-255-2" endpinid="opAmp-71-inputNinv" pointList="220,-368,144,-368,144,-440,96,-440" />
 
-<item itemtype="Connector" uid="connector-295" startpinid="RTD-253-lPin" endpinid="Node-258-1" pointList="220,-320,220,-304,192,-304" />
+<item itemtype="Connector" uid="connector-289" startpinid="RTD-253-lPin" endpinid="Node-258-1" pointList="220,-320,220,-304,192,-304" />
 
-<item itemtype="Connector" uid="connector-296" startpinid="Node-258-2" endpinid="Ground-120-Gnd" pointList="192,-304,192,-292" />
+<item itemtype="Connector" uid="connector-290" startpinid="Node-258-2" endpinid="Ground-120-Gnd" pointList="192,-304,192,-292" />
 
-<item itemtype="Connector" uid="connector-285" startpinid="Uno-63-A5" endpinid="Node-104-1" pointList="-176,-368,-112,-368" />
+<item itemtype="Connector" uid="connector-291" startpinid="Uno-63-A5" endpinid="Node-104-1" pointList="-176,-368,-112,-368" />
 
-<item itemtype="Connector" uid="connector-284" startpinid="Ground-6-Gnd" endpinid="Resistor-84-lPin" pointList="-96,-292,-96,-304,-72,-304" />
+<item itemtype="Connector" uid="connector-292" startpinid="Ground-6-Gnd" endpinid="Resistor-84-lPin" pointList="-96,-292,-96,-304,-72,-304" />
+
+<item itemtype="Connector" uid="Connector-294" startpinid="SerialPort-293-pin0" endpinid="Node-299-0" pointList="-328,-428,-328,-428" />
+
+<item itemtype="Connector" uid="Connector-298" startpinid="Uno-63-0" endpinid="Node-299-1" pointList="-320,-368,-364,-368,-364,-428,-328,-428" />
+
+<item itemtype="Connector" uid="Connector-300" startpinid="Node-299-2" endpinid="SerialPort-293-pin0" pointList="-328,-428,-328,-428" />
+
+<item itemtype="Connector" uid="Connector-301" startpinid="SerialPort-293-pin1" endpinid="Uno-63-1" pointList="-328,-412,-304,-412,-304,-360,-320,-360" />
 
 </circuit>
