@@ -43,7 +43,7 @@ $$
 \frac{R_{Pt100}}{R_{Pt100}+R_{b}} = \frac{R+\Delta R}{(R+\Delta R) + R} = \frac{R+\Delta R}{2R + \Delta R}.
 $$
 
-### 3. Aproximação para Pequenas Variações (\(\Delta R \ll R\))
+### 3. Aproximação para Pequenas Variações $(\Delta R \ll R)$
 
 Para $(\Delta R)$ muito menor que $(R)$, podemos aproximar:
 
@@ -51,11 +51,12 @@ $$
 \frac{R+\Delta R}{2R+\Delta R} \approx \frac{1}{2} + \frac{\Delta R}{4R}.
 $$
 
-Essa aproximação provém da linearização da fração ao redor de $(\Delta R = 0)$.
+Essa aproximação provém da linearização da fração ao redor de $(\Delta R = 0)$, a fração vale 
+$\frac{1}{2}$, e a derivada em relação a $ΔR$ no ponto $ΔR=0$ dá o termo $\frac{\Delta R}{4R}$.
 
 ### 4. Substituindo as Aproximações na Equação Inicial
 
-Substituindo \(\frac{R_{c}}{R_{c}+R_{a}} = 1/2\) e \(\frac{R_{Pt100}}{R_{Pt100}+R_{b}} \approx \frac{1}{2} + \frac{\Delta R}{4R}\):
+Substituindo $(\frac{R_{c}}{R_{c}+R_{a}} = 1/2)$ e $(\frac{R_{Pt100}}{R_{Pt100}+R_{b}} \approx \frac{1}{2} + \frac{\Delta R}{4R}$):
 
 $$
 V_{a} - V_{b} = \left(\frac{1}{2} - \left(\frac{1}{2} + \frac{\Delta R}{4R}\right)\right) V_{cc}.
