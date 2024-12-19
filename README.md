@@ -191,14 +191,14 @@ $$
 
 - **Ponte de Wheatstone:**
   
-  $$
-  Sensibilidade_{Wheatstone} = \frac{\alpha V_{in}}{4}
-  $$
+$$
+Sensibilidade_{Wheatstone} = \frac{\alpha V_{in}}{4}
+$$
 
 - **Divisor Resistivo:**
   
-  $$
-  Sensibilidade_{Divisor} = V_{in} \cdot \frac{\alpha R R_1}{(R_1 + R)^2}
-  $$
+$$
+Sensibilidade_{Divisor} = V_{in} \cdot \frac{\alpha R R_1}{(R_1 + R)^2}
+$$
 
 A Ponte de Wheatstone apresenta uma relação mais simples, dependendo apenas de $(\alpha)$ e $(V_{in})$. Já o divisor resistivo depende da relação entre $(R_{1})$ e $(R)$, além de $(\alpha)$ e $(V_{in})$.
