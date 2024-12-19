@@ -1,4 +1,5 @@
-## Derivação da Expressão Aproximada da Saída da Ponte de Wheatstone
+# Instrumentação Industrial II
+## Aula Prática 02: Derivação da Expressão Aproximada da Saída da Ponte de Wheatstone
 
 Partindo da equação geral de uma Ponte de Wheatstone:
 
@@ -43,16 +44,52 @@ $$
 \frac{R_{Pt100}}{R_{Pt100}+R_{b}} = \frac{R+\Delta R}{(R+\Delta R) + R} = \frac{R+\Delta R}{2R + \Delta R}.
 $$
 
-### 3. Aproximação para Pequenas Variações $(\Delta R \ll R)$
+### 3. Aproximação por expansão de Taylor para Pequenas Variações $(\Delta R \ll R)$
 
-Para $(\Delta R)$ muito menor que $(R)$, podemos aproximar:
+Defina a função:
 
 $$
-\frac{R+\Delta R}{2R+\Delta R} \approx \frac{1}{2} + \frac{\Delta R}{4R}.
+f(\Delta R) = \frac{R + \Delta R}{2R + \Delta R}.
 $$
 
-Essa aproximação provém da linearização da fração ao redor de $(\Delta R = 0)$, a fração vale 
-$\frac{1}{2}$, e a derivada em relação a $ΔR$ no ponto $ΔR=0$ dá o termo $\frac{\Delta R}{4R}$.
+Queremos aproximar $f(\Delta R)$ para valores pequenos de $\Delta R$.
+
+1. Avalie a função em $\Delta R = 0$:
+   $$
+   f(0) = \frac{R + 0}{2R + 0} = \frac{R}{2R} = \frac{1}{2}.
+   $$
+
+2. Calcule a derivada de $ f $ em relação a $\Delta R$:
+   $$
+   f'(\Delta R) = \frac{(2R + \Delta R)*1 - (R + \Delta R)*1}{(2R + \Delta R)^2}.
+   $$
+
+   Simplificando o numerador:
+   $$
+   (2R + \Delta R) - (R + \Delta R) = R.
+   $$
+
+   Portanto:
+   $$
+   f'(\Delta R) = \frac{R}{(2R + \Delta R)^2}.
+   $$
+
+3. Avalie a derivada em $\Delta R = 0$:
+   $$
+   f'(0) = \frac{R}{(2R)^2} = \frac{R}{4R^2} = \frac{1}{4R}.
+   $$
+
+4. Agora, utilizando a expansão de Taylor de primeira ordem em torno de $\Delta R = 0$:
+   $$
+   f(\Delta R) \approx f(0) + f'(0)\Delta R = \frac{1}{2} + \frac{1}{4R}\Delta R.
+   $$
+
+Substituindo novamente $\Delta R$:
+$$
+\frac{R + \Delta R}{2R + \Delta R} \approx \frac{1}{2} + \frac{\Delta R}{4R}.
+$$
+
+Dessa forma, obtivemos a aproximação desejada por meio de uma expansão de Taylor.
 
 ### 4. Substituindo as Aproximações na Equação Inicial
 
