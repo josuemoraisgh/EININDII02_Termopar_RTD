@@ -52,14 +52,14 @@ $$
 f(\Delta R) = \frac{R + \Delta R}{2R + \Delta R}.
 $$
 
-Queremos aproximar $f(\Delta R)$ para valores pequenos de $\Delta R$.
+Queremos aproximar $(f(\Delta R))$ para valores pequenos de $(\Delta R)$.
 
-1. Avalie a função em $\Delta R = 0$:
+1. Avalie a função em $(\Delta R = 0)$:
    $$
    f(0) = \frac{R + 0}{2R + 0} = \frac{R}{2R} = \frac{1}{2}.
    $$
 
-2. Calcule a derivada de $ f $ em relação a $\Delta R$:
+2. Calcule a derivada de $( f )$ em relação a $(\Delta R)$:
    $$
    f'(\Delta R) = \frac{(2R + \Delta R)*1 - (R + \Delta R)*1}{(2R + \Delta R)^2}.
    $$
@@ -74,7 +74,7 @@ Queremos aproximar $f(\Delta R)$ para valores pequenos de $\Delta R$.
    f'(\Delta R) = \frac{R}{(2R + \Delta R)^2}.
    $$
 
-3. Avalie a derivada em $\Delta R = 0$:
+3. Avalie a derivada em $(\Delta R = 0)$:
    $$
    f'(0) = \frac{R}{(2R)^2} = \frac{R}{4R^2} = \frac{1}{4R}.
    $$
@@ -84,7 +84,7 @@ Queremos aproximar $f(\Delta R)$ para valores pequenos de $\Delta R$.
    f(\Delta R) \approx f(0) + f'(0)\Delta R = \frac{1}{2} + \frac{1}{4R}\Delta R.
    $$
 
-Substituindo novamente $\Delta R$:
+Substituindo novamente $(\Delta R)$:
 $$
 \frac{R + \Delta R}{2R + \Delta R} \approx \frac{1}{2} + \frac{\Delta R}{4R}.
 $$
