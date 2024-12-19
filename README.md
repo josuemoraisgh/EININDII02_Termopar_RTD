@@ -56,39 +56,39 @@ Queremos aproximar $(f(\Delta R))$ para valores pequenos de $(\Delta R)$.
 
 1. Avalie a função em $(\Delta R = 0)$:
 
-   $$
-   f(0) = \frac{R + 0}{2R + 0} = \frac{R}{2R} = \frac{1}{2}.
-   $$
+$$
+f(0) = \frac{R + 0}{2R + 0} = \frac{R}{2R} = \frac{1}{2}.
+$$
 
 3. Calcule a derivada de $( f )$ em relação a $(\Delta R)$:
    
-   $$
-   f'(\Delta R) = \frac{(2R + \Delta R)*1 - (R + \Delta R)*1}{(2R + \Delta R)^2}.
-   $$
+$$
+f'(\Delta R) = \frac{(2R + \Delta R)*1 - (R + \Delta R)*1}{(2R + \Delta R)^2}.
+$$
 
    Simplificando o numerador:
    
-   $$
-   (2R + \Delta R) - (R + \Delta R) = R.
-   $$
+$$
+(2R + \Delta R) - (R + \Delta R) = R.
+$$
 
    Portanto:
    
-   $$
-   f'(\Delta R) = \frac{R}{(2R + \Delta R)^2}.
-   $$
+$$
+f'(\Delta R) = \frac{R}{(2R + \Delta R)^2}.
+$$
 
 5. Avalie a derivada em $(\Delta R = 0)$:
 
-   $$
-   f'(0) = \frac{R}{(2R)^2} = \frac{R}{4R^2} = \frac{1}{4R}.
-   $$
+$$
+f'(0) = \frac{R}{(2R)^2} = \frac{R}{4R^2} = \frac{1}{4R}.
+$$
 
 7. Agora, utilizando a expansão de Taylor de primeira ordem em torno de $\Delta R = 0$:
    
-   $$
-   f(\Delta R) \approx f(0) + f'(0)\Delta R = \frac{1}{2} + \frac{1}{4R}\Delta R.
-   $$
+$$
+f(\Delta R) \approx f(0) + f'(0)\Delta R = \frac{1}{2} + \frac{1}{4R}\Delta R.
+$$
 
 Substituindo novamente $(\Delta R)$:
 
