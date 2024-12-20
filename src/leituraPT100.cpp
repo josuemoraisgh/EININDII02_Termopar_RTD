@@ -1,5 +1,8 @@
 #include <Arduino.h>
-#include "inindThread.h"
+
+#define MAXLENGTHJQUEUE 20
+#define NUM_TASKS 2
+#include "util/jtask.h"
 
 double getTempRTD(int pin)
 {
@@ -31,7 +34,10 @@ void printRTDValue()
 void setup()
 {
   Serial.begin(115200);
-  threadSetup(printRTDValue, 1, NULL);
+  taskSetup(1000);    // Configura o timer para 1000 Hz (1 ms)
+  taskAttachFunc(printRTDValue, 1);
 }
 
-void loop() {}
+void loop() {
+  taskLoop(); // Executa as tarefas enfileiradas
+}
