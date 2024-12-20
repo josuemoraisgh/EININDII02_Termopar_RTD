@@ -34,10 +34,10 @@ void printRTDValue()
 void setup()
 {
   Serial.begin(115200);
-  taskSetup(1000);    // Configura o timer para 1000 Hz (1 ms)
-  taskAttachFunc(printRTDValue, 1);
+  jtaskSetup(1000);    // Configura o timer para 1000 Hz (1 ms)
+  jtaskAttachFunc(printRTDValue, 1);
 }
 
 void loop() {
-  taskLoop(); // Executa as tarefas enfileiradas
+  jtaskLoop(); // Executa as tarefas enfileiradas
 }

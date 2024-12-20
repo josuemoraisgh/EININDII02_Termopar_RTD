@@ -49,7 +49,7 @@ jQueue_t jtaskQueue; // Fila para armazenar as tarefas pendentes a serem executa
 // Configuração inicial do timer
 // frequency: frequência em Hz
 // Exemplo: se frequency = 1000, a interrupção será chamada 1000 vezes por segundo (1 ms).
-bool taskSetup(uint32_t frequency)
+bool jtaskSetup(uint32_t frequency)
 {
     // Configuração do timer baseada na plataforma
     #ifdef ESP32
@@ -70,7 +70,7 @@ bool taskSetup(uint32_t frequency)
 }
 
 // Adiciona uma nova tarefa à estrutura de tarefas.
-bool taskAttachFunc(void (*task)(), uint16_t limit) {
+bool jtaskAttachFunc(void (*task)(), uint16_t limit) {
     if (jtaskIndex >= NUM_TASKS) { // Verifica se há espaço para adicionar mais tarefas.
         return false; // Retorna false se o número máximo de tarefas for atingido.
     }
@@ -82,7 +82,7 @@ bool taskAttachFunc(void (*task)(), uint16_t limit) {
 }
 
 // Executa tarefas pendentes da fila.
-void taskLoop()
+void jtaskLoop()
 {
     volatile void (*taskMessage)(); // Ponteiro para armazenar a próxima tarefa a ser executada.
     // Enquanto houver tarefas na fila, executa-as.
