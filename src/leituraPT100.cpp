@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-#define MAXLENGTHJQUEUE 20
+#define MAXLENGTHJQUEUE 5
 #define NUM_TASKS 2
 #include "util/jtask.h"
 
@@ -28,14 +28,13 @@ void printRTDValue()
   Serial.print(">Temp:");              // IMPRIME O TEXTO NO MONITOR SERIAL
   Serial.print(temperature, 2);        // IMPRIME NO MONITOR SERIAL A TEMPERATURA MEDIDA
   Serial.println("§ºC");               // IMPRIME O TEXTO NO MONITOR SERIAL
-  delay(1000);                         // INTERVALO DE 1 SEGUNDO
 }
 
 void setup()
 {
   Serial.begin(115200);
   jtaskSetup(1000);    // Configura o timer para 1000 Hz (1 ms)
-  jtaskAttachFunc(printRTDValue, 1);
+  jtaskAttachFunc(printRTDValue, 1000); // Executa a cada 1s (1000 ms)
 }
 
 void loop() {
