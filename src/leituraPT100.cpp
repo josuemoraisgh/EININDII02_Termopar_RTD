@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 #define MAXLENGTHJQUEUE 5
-#define NUM_TASKS 2
+#define NUMTASKS 2
 #include "util/jtask.h"
 
 double getTempRTD(int pin)
